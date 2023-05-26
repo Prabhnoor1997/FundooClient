@@ -1,0 +1,145 @@
+
+<div fxFlex >
+    <div fxLayout="column wrap" class="container">
+      <mat-toolbar class="toolbar">
+        <button class="menu" mat-icon-button (click)="snav.toggle()" ><mat-icon>menu</mat-icon></button>
+        <span class="app-name1">{{name1}}</span>
+        <span class="app-name2">{{name2}}</span>
+        <div class="firstDiv">
+         <button mat-icon-button (click)="showDataSearch()">
+           <i class="material-icons">
+             search
+            </i>
+          </button>
+          <input class="searchBox" type="text" placeholder="Search" [(ngModel)]="searchData.data" (keyup)="onStatusChanged($event)" (click)="searchState()">
+          <button mat-icon-button (click)="clearSearch()">
+          <i class="material-icons">
+            close
+          </i>
+        </button>
+        </div>
+        <div class="afterSearchButton" style="margin-left:55px">
+            <i class="material-icons">
+                refresh
+            </i>
+        </div>
+        <div class="afterSearchButton" (click)="toggleView()">
+            <i *ngIf="view == false" class="material-icons">
+                view_stream
+            </i>
+            <i *ngIf="view == true" class="material-icons">
+              view_module
+            </i>
+        </div>
+        <div class="toolLeftDiv" fxLayout="row" >
+            <!-- <a href="www.google.co.in"> -->
+              <div>
+                  <button mat-icon-button >  
+                      <i class="material-icons ">
+                          apps
+                          </i>
+                    
+                </button>
+              </div>
+              
+            <!-- </a> -->
+            <div>
+                <button mat-icon-button>
+                    <i class="material-icons">
+                        notifications
+                        </i>
+                  
+              </button>
+            </div>
+            <div>
+                <button mat-icon-button style="background-color:none" (click) = "signoutCard()">
+                        <div *ngIf="!profilePicShow" class="signoutDiv">{{firstCharacter}}</div>
+                        <div *ngIf="profilePicShow" class="signoutDivPhoto">
+                            <img style="height:40px;width:40px;" [src]="profilePicData"/>
+                        </div>
+                </button>
+            </div>
+            </div>
+            
+    <mat-card *ngIf="sign" (click)="signoutCard()" class="signout">
+      <div class="signOuterDiv" fxLayout="row">
+        <div fxLayout="column">
+            <div *ngIf="!profilePicShow" class="imageDiv"><p class="imgBig">{{firstCharacter}}</p>
+            </div>
+            <div *ngIf="profilePicShow" class="imageDiv">
+                <img style="height:80px;width:80px;" [src]="profilePicData" />
+            </div>
+            <div style="font-size:13px;cursor: pointer;" (click)="changeImage()">
+              change image
+            </div>
+        </div>
+            <div>
+            <div class="nameEmail">
+            <div class="username">
+                {{name}}
+              </div>
+              <div class="useremail">
+                {{email}}
+              </div>
+              <div>
+                  <button class="signoutButton" mat-raised-button  (click)="signout()">signout</button>
+                </div>
+            </div> 
+          </div> 
+      </div>
+       
+      </mat-card>
+         
+      </mat-toolbar>
+    
+      <mat-sidenav-container class="sidenav-container" hasBackdrop="false">
+        <mat-sidenav #snav class="sidenav">
+          <mat-nav-list>
+            <a mat-list-item routerLink="." (click) = "notes()"><img class="icon" src="../../../assets/images/note.svg" alt=""><span class="description">Notes</span> </a>
+            <a mat-list-item routerLink="." (click) = "reminders()"><img class="icon" src="../../../assets/images/reminder.svg" ><span class="description">Reminders</span> </a>
+            <mat-divider></mat-divider>
+            <div class="top">
+            <div>
+              <div  class="label1">Labels</div> 
+              <div>
+                <div class="label2">
+                    <button mat-button (click)="labelEdit()">
+                        EDIT
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="labelsEnter" *ngFor="let item of labels" fxLayout="row" fxLayoutAlign="start center">
+                <a mat-list-item routerLink="."(click)="customLabel(item)">
+                <i class="material-icons icon">
+                    label
+                </i>
+                  {{item}}
+              </a>
+            </div>
+            <div class="createDiv">
+                <a mat-list-item routerLink="." >
+              <div>
+                <i class="material-icons icon">
+                  add
+                </i>
+              </div>
+              <div class="createLabel1">
+                  Create new label
+              </div> 
+            </a>
+            </div>
+            <mat-divider></mat-divider>
+            <a mat-list-item routerLink="." (click) = "archive()"><i class="material-icons icon">archive</i><span class="description">Archive</span> </a>
+            <a mat-list-item routerLink="." (click) = "trash()"><img class="icon" src="../../../assets/images/trash.svg" alt=""><span class="description">Trash</span> </a>
+          </mat-nav-list>
+        </mat-sidenav>
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+    </div>
+    
+    

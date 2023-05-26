@@ -1,0 +1,244 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255 255 255 / 54%) !important;
+    width: 100%;
+  }
+  
+  .toolbar {
+    position: fixed;
+    background-color: rgb(255, 187, 0);
+    z-index: 2;
+    width: 100%;
+  }
+  
+  .app-name1 {
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: 'Roboto', arial, sans-serif;
+    width: 74px;
+    height: 24px;
+    padding-bottom: 10px;
+  }
+  
+  .app-name2 {
+    font-size: 22px;
+    padding-left: 10px;
+    color: black;
+    width: 74px;
+    height: 24px;
+    padding-bottom: 10px;
+  }
+  
+  .sidenav-container {
+    /* width: 265px; */
+    margin-top: 60px;
+    color: #222020;
+    flex: 1 0 auto;
+    height: fit-content;
+    background-color: rgb(255 255 255 / 54%) !important;
+  }
+  
+  .sidenav {
+    width: 265px;
+  }
+  
+  .icon {
+    opacity: 0.5;
+    height: 24px;
+    width: 24px;
+    padding-left: 5px;
+  }
+  
+  .searchBox {
+    border: none;
+    margin-left: 20px;
+    outline: transparent;
+    width: 84%;
+    height: 46px;
+    border-radius: 5px;
+    background: transparent;
+  }
+  
+  .label {
+    width: 280px;
+    height: 52px;
+    font-size: 13px;
+    padding: 15px 10px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .label1 {
+    float: left;
+    padding: 10px
+  }
+  
+  .label2 {
+    float: right
+  }
+  
+  .description {
+    padding-left: 32px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .navDiv {
+    padding-left: 24px;
+  }
+  
+  #toolButton {
+    width: 54px;
+    height: 46px;
+  }
+  
+  .afterSearchButton {
+    margin-left: 15px;
+    margin-top: 9px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  .toolLeftDiv {
+    /* margin-top: 60px; */
+    margin-left: 60px;
+    
+  }
+  
+  .toolLeftDiv button {
+    margin-right: 12px;
+    opacity: 0.5;
+  }
+  
+  .firstDiv {
+    margin-left: 25px;
+    background: rgba(0, 0, 0, 0.04);
+    border: solid rgba(0, 0,0, 0);
+    width: 700px;
+    height: 46px;
+    text-decoration-color: black;
+    border-radius: 5px;
+  }
+  
+  .menu {
+    color: black;
+    opacity: 0.5
+  }
+  
+  .signoutDiv {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightgray;
+    color: black;
+    overflow: hidden;
+  }
+  .signoutDivPhoto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: none;
+    overflow: hidden;
+  }
+  
+  .signout {
+    position: absolute;
+    height: 110px;
+    width: 320px;
+    margin-top: 110px;
+    float: right;
+    margin-left: 950px;
+  }
+  
+  .username {
+    font-size: 15px;
+    font-weight: bold;
+    /* float: right; */
+  }
+  
+  .useremail {
+    font-size: 15px;
+    opacity: 0.5;
+    margin-top: -7px;
+    
+  }
+  
+  .signoutButton {
+    float: right;
+    margin-top: 15px;
+  }
+  
+  .imageDiv {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: lightgray;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    float:left;
+    text-align: center;
+  }
+  
+  .changeImage {
+    position: absolute;
+  }
+  
+  .signOuterDiv {
+    height: 100px;
+  }
+  
+  .nameEmail {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+  }
+  
+  .imgBig {
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: normal;
+    opacity: 0.7;
+  }
+  
+  .transition {
+    margin-left: 80px;
+  }
+  
+  .noTransition {
+    margin-left: 0px;
+  }
+  
+  #smooth {
+    transition: all 5s linear;
+  }
+  
+  .createLabel {
+    float: left;
+  }
+  
+  .createLabel1 {
+    float: right;
+  }
+  
+  
+  .top {
+    height:40px;
+  }
+  
+  ::ng-deep .mat-drawer-content {
+    overflow: overlay !important;
+  }
+  .sidenav-container {
+    position: relative;
+    height: 100vh;
+  }
+  
