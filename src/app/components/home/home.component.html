@@ -2,7 +2,7 @@
 <div fxFlex >
     <div fxLayout="column wrap" class="container">
       <mat-toolbar class="toolbar">
-        <button class="menu" mat-icon-button (click)="snav.toggle()" ><mat-icon>menu</mat-icon></button>
+        <button class="menu" mat-icon-button (click)="toggleSideNav()" ><mat-icon>menu</mat-icon></button>
         <span class="app-name1">{{name1}}</span>
         <span class="app-name2">{{name2}}</span>
         <div class="firstDiv">
@@ -11,7 +11,7 @@
              search
             </i>
           </button>
-          <input class="searchBox" type="text" placeholder="Search" [(ngModel)]="searchData.data" (keyup)="onStatusChanged($event)" (click)="searchState()">
+          <input class="searchBox" type="text" placeholder="Search" [(ngModel)]="searchData.data" (keyup)="onStatusChanged(searchData.data)" (click)="searchState()">
           <button mat-icon-button (click)="clearSearch()">
           <i class="material-icons">
             close
@@ -93,7 +93,7 @@
       </mat-toolbar>
     
       <mat-sidenav-container class="sidenav-container" hasBackdrop="false">
-        <mat-sidenav #snav class="sidenav">
+        <mat-sidenav #snav class="sidenav" [opened]="isSidenavOpen">
           <mat-nav-list>
             <a mat-list-item routerLink="." (click) = "notes()"><img class="icon" src="../../../assets/images/note.svg" alt=""><span class="description">Notes</span> </a>
             <a mat-list-item routerLink="." (click) = "reminders()"><img class="icon" src="../../../assets/images/reminder.svg" ><span class="description">Reminders</span> </a>
@@ -135,7 +135,7 @@
             <a mat-list-item routerLink="." (click) = "trash()"><img class="icon" src="../../../assets/images/trash.svg" alt=""><span class="description">Trash</span> </a>
           </mat-nav-list>
         </mat-sidenav>
-      <mat-sidenav-content>
+      <mat-sidenav-content class="sideNavContainer">
         <router-outlet></router-outlet>
       </mat-sidenav-content>
       </mat-sidenav-container>

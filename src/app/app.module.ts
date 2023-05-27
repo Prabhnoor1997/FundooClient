@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotesComponent } from './components/notes/notes.component';
@@ -15,6 +15,13 @@ import { LoginComponent } from './components/login/login.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { DataServiceService } from './services/data-service.service';
 import { AppService } from './services/app.service';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { SearchComponent } from './components/search/search.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { LabelComponent } from './components/label/label.component';
+import { RemindersComponent } from './components/reminders/reminders.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { SearchFilterPipe } from './services/search-filter.pipe';
 
 
 export function tokenGetter() {
@@ -23,15 +30,23 @@ export function tokenGetter() {
 
 @NgModule({
   declarations: [
+    RegistrationComponent,
     AppComponent,
     NotesComponent,
     NoteCardComponent,
     HomeComponent,
     CreateLabelDialogComponent,
     ChangeImageDialogComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent,
+    TrashComponent,
+    LabelComponent,
+    RemindersComponent,
+    ArchiveComponent,
+    SearchFilterPipe
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -39,17 +39,28 @@
   
   .sidenav-container {
     /* width: 265px; */
+    display: flex;
     margin-top: 60px;
     color: #222020;
     flex: 1 0 auto;
     height: fit-content;
     background-color: rgb(255 255 255 / 54%) !important;
+    flex-grow: 1; /* Allow main body to grow and occupy remaining width */
+    transition: margin-left 0.3s ease; /* Add a transition effect for margin */
   }
   
+  .sidenav.open {
+    width: 30vh;
+  }
+  .sideNavContainer.open {
+    margin-left: 30vh; /* Adjust the width to desired size when open */
+  }
   .sidenav {
-    width: 265px;
+    width : 20vw;
+    transition: width 0.3s ease; 
+    min-width: 200px;
+    overflow: hidden;
   }
-  
   .icon {
     opacity: 0.5;
     height: 24px;
@@ -236,9 +247,14 @@
   
   ::ng-deep .mat-drawer-content {
     overflow: overlay !important;
-  }
-  .sidenav-container {
-    position: relative;
-    height: 100vh;
+    width: 80vw;
   }
   
+ 
+  ::ng-deep .mat-drawer-inner-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed !important;
+    -webkit-overflow-scrolling: touch;
+}

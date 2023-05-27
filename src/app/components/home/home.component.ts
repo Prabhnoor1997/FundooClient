@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
   };
   profilePicShow = false;
   profilePicData = '';
+  isSidenavOpen : boolean = false;
   ngOnInit() {
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(localStorage.getItem('token')!);
@@ -160,9 +161,9 @@ export class HomeComponent implements OnInit {
     this.searchData.data = '';
   }
 
-  onStatusChanged(event : KeyboardEvent) {
+  onStatusChanged(data : any) {
 
-      this.data.searchData(this.searchData.data);
+      this.data.searchData(data);
     
   }
 
@@ -182,4 +183,14 @@ export class HomeComponent implements OnInit {
         })
       });
   }
+
+
+   toggleSideNav (): void {
+    this.isSidenavOpen = !this.isSidenavOpen;
+    const mainBody = document.querySelector('.sideNavContainer') as HTMLElement;
+    if (window.innerWidth >= 768) {
+      mainBody.classList.toggle('open');
+    }
+  
+  };
 }

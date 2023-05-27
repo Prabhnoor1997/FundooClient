@@ -1,0 +1,48 @@
+
+.icon {
+    margin-bottom:25px;;
+    height:30px;
+}
+
+.trashDiv {
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.card {
+    position: relative;
+        border-radius: var(--mdc-elevated-card-container-shape, var(--mdc-shape-medium, 7px));
+        background-color: var(--mdc-elevated-card-container-color, transparent);
+        border-width: 0px;
+        border-style: solid;
+        border-color: var(--mdc-elevated-card-container-color, transparent);
+        margin: 10px;
+        min-width: 200px;
+        min-height: 200px;
+        padding: 10px
+   
+}
+
+.innerIconDiv {
+    height: 24px;
+    width: 24px;
+    padding: 5px;
+    padding-right: 14px;
+    opacity: 0.5;
+    float:right;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.description {
+    margin-left:10px;
+    margin-right: 10px;
+}
