@@ -60,6 +60,7 @@
     transition: width 0.3s ease; 
     min-width: 200px;
     overflow: hidden;
+    color: aquamarine!important;
   }
   .icon {
     opacity: 0.5;
@@ -142,6 +143,9 @@
   .menu {
     color: black;
     opacity: 0.5
+  }
+  .navOptions{
+    width: 30vh
   }
   
   .signoutDiv {
@@ -248,6 +252,7 @@
   ::ng-deep .mat-drawer-content {
     overflow: overlay !important;
     width: 80vw;
+    z-index: 4!important;
   }
   
  
@@ -257,4 +262,8 @@
     overflow: auto;
     position: fixed !important;
     -webkit-overflow-scrolling: touch;
+}
+
+::ng-deep .mat-sidenav{
+color: aquamarine!important;
 }

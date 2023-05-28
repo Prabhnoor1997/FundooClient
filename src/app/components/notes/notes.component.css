@@ -111,7 +111,7 @@
   
   .closeButton {
       float: right;
-      color: black;
+      color: black!important;
   }
   
   div[contenteditable=true]:empty::before {

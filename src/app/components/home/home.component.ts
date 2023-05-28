@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
   profilePicData = '';
   isSidenavOpen : boolean = false;
   ngOnInit() {
+    this.zindex();
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(localStorage.getItem('token')!);
     this.raw_data = decodedToken;
@@ -60,7 +61,15 @@ export class HomeComponent implements OnInit {
 
   name1 = "Google"
   name2 = "Keep"
-
+  zindex(){
+    const myDiv = document.getElementById('toolbar') as HTMLDivElement;
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth < 768) { // Change 768 to your desired viewport width
+      myDiv.style.zIndex = '5'; // Set a higher z-index value
+    } else {
+      myDiv.style.zIndex = '2'; // Reset the z-index value
+    }
+  }
   notes() {
     this.name1 = "Google"
     this.name2 = "Keep"
@@ -187,9 +196,14 @@ export class HomeComponent implements OnInit {
 
    toggleSideNav (): void {
     this.isSidenavOpen = !this.isSidenavOpen;
+    const myDiv = document.querySelector('.sidenav') as HTMLElement;
     const mainBody = document.querySelector('.sideNavContainer') as HTMLElement;
     if (window.innerWidth >= 768) {
       mainBody.classList.toggle('open');
+      myDiv.style.zIndex = '2';
+    }
+    else{
+      myDiv.style.zIndex = '5';
     }
   
   };

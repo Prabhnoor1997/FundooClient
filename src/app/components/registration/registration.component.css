@@ -1,18 +1,52 @@
 .card {
-    width: 400px;
-    height: 700px;
-    position: relative;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
+  width: 300px;
+  width: max(350px,40vw);
+  height: min(80vh, 600px);
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #b89c6d12;
+}
+.field {
+  width: auto;
+  color: #060606!important; /* Add your desired text color here */
+  background-color: #faf8f5; /* Add your desired background color here */
+}
+
+::ng-deep.field::placeholder {
+  color: #080808!important; /* Add your desired placeholder text color here */
+  background-color: #faf8f5;
+ 
+}
+::ng-deep .mdc-text-field{
+  background-color:#faf8f5!important;
+  border: 1px solid #ccc;
+  color: #060606!important;
+  border-radius: 15px;
+  /* padding: 10px; */
+  outline: none;
+  transition: border-color 0.3s;
+}
+
   .container {
     display: flex;
-    flex-direction: column;
-    padding: 20px;
   }
+  .signInButton{
+    margin:5px;
+    color: black !important;
+     /* Box Shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the values to achieve the desired shadow effect */
+    outline: none; /* Remove the default outline */
+  }
+ 
+  .signInButton:active {
+    /* Pressing effect */
+    transform: scale(0.95); /* Adjust the scale value to control the level of pressing effect */
+  }
+
   .container > * {
     width: 100%;
   }
@@ -20,7 +54,11 @@
     font-size: 20px;
     text-align: center;
     vertical-align: middle;   
-    padding-left: 100px;       
+    justify-content: center;       
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.datePickerIcon{
+  color: black;
 }
