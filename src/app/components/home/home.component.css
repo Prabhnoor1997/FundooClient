@@ -12,7 +12,7 @@
   
   .toolbar {
     position: fixed;
-    background-color: rgb(255, 187, 0);
+    background-color:#4637373b;
     z-index: 2;
     width: 100%;
   }
@@ -60,13 +60,15 @@
     transition: width 0.3s ease; 
     min-width: 200px;
     overflow: hidden;
-    color: aquamarine!important;
+    background-color: #4637373b!important;
+    color: black!important;
   }
   .icon {
     opacity: 0.5;
     height: 24px;
     width: 24px;
     padding-left: 5px;
+    color: black;
   }
   
   .searchBox {

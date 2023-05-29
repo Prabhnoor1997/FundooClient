@@ -73,11 +73,11 @@ export class NoteCardComponent implements OnInit {
   colors = [
     '#fff',
 
-    'rgb(255, 138, 128)',
+    'rgb(242, 139, 130)',
 
-    'rgb(255, 209, 128)',
+    'rgb(204, 255, 144)',
 
-    'rgb(255, 255, 141)',
+    'rgb(255, 206, 150)',
 
     'rgb(204, 255, 144)',
 

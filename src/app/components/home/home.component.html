@@ -96,8 +96,8 @@
         <mat-sidenav #snav class="sidenav" [opened]="isSidenavOpen">
           <mat-nav-list>
             <a mat-list-item routerLink="." (click) = "notes()" class="sidenav"><img class="icon" src="../../../assets/images/notes.png" alt=""><span class="description">Notes</span> </a>
-            <a mat-list-item routerLink="." (click) = "reminders()" class="sidenav"><img class="icon" src="../../../assets/images/reminder.png" ><span class="description">Reminders</span> </a>
             <mat-divider></mat-divider>
+            <a mat-list-item routerLink="." (click) = "reminders()" class="sidenav"><img class="icon" src="../../../assets/images/reminder.png" ><span class="description">Reminders</span> </a>
             <!-- <div class="top">
             <div>
               <div  class="label1">Labels</div> 
@@ -132,7 +132,8 @@
             </div> -->
             <mat-divider></mat-divider>
             <a mat-list-item routerLink="." (click) = "archive()" class="sidenav"><i class="material-icons icon">archive</i><span class="description">Archive</span> </a>
-            <a mat-list-item routerLink="." (click) = "trash()" class="sidenav"><img class="icon" src="../../../assets/images/trash.svg" alt=""><span class="description">Trash</span> </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item routerLink="." (click) = "trash()" class="sidenav"><img class="icon" src="../../../assets/images/delete.png" alt=""><span class="description">Trash</span> </a>
           </mat-nav-list>
         </mat-sidenav>
       <mat-sidenav-content class="sideNavContainer">

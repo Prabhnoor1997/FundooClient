@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
   profilePicData = '';
   isSidenavOpen : boolean = false;
   ngOnInit() {
-    this.zindex();
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(localStorage.getItem('token')!);
     this.raw_data = decodedToken;
@@ -59,20 +58,12 @@ export class HomeComponent implements OnInit {
 
   }
 
-  name1 = "Google"
-  name2 = "Keep"
-  zindex(){
-    const myDiv = document.getElementById('toolbar') as HTMLDivElement;
-    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-    if (viewportWidth < 768) { // Change 768 to your desired viewport width
-      myDiv.style.zIndex = '5'; // Set a higher z-index value
-    } else {
-      myDiv.style.zIndex = '2'; // Reset the z-index value
-    }
-  }
+  name1 = "Fundoo"
+  name2 = "Notes"
+ 
   notes() {
-    this.name1 = "Google"
-    this.name2 = "Keep"
+    this.name1 = "Fundoo"
+    this.name2 = "Notes"
     this.router.navigate(['home/notes']);
     console.log(this.raw_data);
     
