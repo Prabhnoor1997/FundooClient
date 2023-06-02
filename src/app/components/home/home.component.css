@@ -60,7 +60,7 @@
     transition: width 0.3s ease; 
     min-width: 200px;
     overflow: hidden;
-    background-color: #4637373b!important;
+    background-color:#b2b2b2!important;
     color: black!important;
   }
   .icon {
@@ -253,7 +253,7 @@
   
   ::ng-deep .mat-drawer-content {
     overflow: overlay !important;
-    width: 80vw;
+    width: 100%;
     z-index: 4!important;
   }
   
@@ -264,8 +264,4 @@
     overflow: auto;
     position: fixed !important;
     -webkit-overflow-scrolling: touch;
-}
-
-::ng-deep .mat-sidenav{
-color: aquamarine!important;
 }
