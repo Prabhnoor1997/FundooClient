@@ -41,7 +41,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatListModule,
     MatExpansionModule,
     MatDialogModule,
-    MatSelectModule,
+    MatSelectModule,  
+    MatIconModule,
+    MatButtonModule
   ],
   declarations: [],
   providers: [],

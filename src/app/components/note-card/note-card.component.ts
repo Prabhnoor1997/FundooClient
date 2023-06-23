@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, Output, EventEmitter, Inject } from '@angular/core';
 import { AppService } from '../../services/app.service';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogOverviewExampleDialog } from '../dialog/dialog.component';
 //import { DialogOverviewExampleDialog } from '../dialog/dialog.component';
 //import { CollaboratorDialogComponent } from '../collaborator-dialog/collaborator-dialog.component';
 
@@ -199,21 +200,21 @@ export class NoteCardComponent implements OnInit {
   }
 
   openDialog(): void {
-    // // const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-    // //   width: '600px',
-    // //   data: this.data,
-    // //   disableClose: true
-    // });
+     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+       width: '600px',
+       data: this.data,
+      disableClose: true
+    });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed : '+result.title.innerHTML);
-    //   console.log("Description : "+result.description.innerHTML);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed : '+result.title.innerHTML);
+      console.log("Description : "+result.description.innerHTML);
       
-    //   this.data.title = result.title.innerHTML;
-    //   this.data.description = result.description.innerHTML;
-    //   console.log(this.data); 
-    //   this.update();
-    // });
+      this.data.title = result.title.innerHTML;
+      this.data.description = result.description.innerHTML;
+      console.log(this.data); 
+      this.update();
+    });
   }
 
   openCollaboraterDialog() {
@@ -227,13 +228,13 @@ export class NoteCardComponent implements OnInit {
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log(result.email.innerHTML);
       
-    //   // console.log('The dialog was closed : '+result.title.innerHTML);
-    //   // console.log("Description : "+result.description.innerHTML);
+    //   console.log('The dialog was closed : '+result.title.innerHTML);
+    //   console.log("Description : "+result.description.innerHTML);
       
-    //   // this.data.title = result.title.innerHTML;
-    //   // this.data.description = result.description.innerHTML;
-    //   // console.log(this.data); 
-    //   // this.update();
+    //   this.data.title = result.title.innerHTML;
+    //   this.data.description = result.description.innerHTML;
+    //   console.log(this.data); 
+    //   this.update();
     // });
   }
 

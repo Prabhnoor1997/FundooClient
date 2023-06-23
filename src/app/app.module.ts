@@ -22,7 +22,7 @@ import { LabelComponent } from './components/label/label.component';
 import { RemindersComponent } from './components/reminders/reminders.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { SearchFilterPipe } from './services/search-filter.pipe';
-
+import { DialogOverviewExampleDialog } from './components/dialog/dialog.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -43,7 +43,9 @@ export function tokenGetter() {
     LabelComponent,
     RemindersComponent,
     ArchiveComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    DialogOverviewExampleDialog
+  
   ],
   imports: [
     FormsModule,
